@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class FloorConfirmer : MonoBehaviour
 {
-
     private PositionFoundMessage _lastReceivedMessage;
 
     public GameObject ConfirmObject;
@@ -18,8 +17,6 @@ public class FloorConfirmer : MonoBehaviour
         ResendMessage(true);
 #endif
     }
-
-    // Update is called once per frame
 
     public void Reset()
     {
@@ -41,7 +38,8 @@ public class FloorConfirmer : MonoBehaviour
     {
         if (_lastReceivedMessage != null)
         {
-            _lastReceivedMessage.Status = accepted ? PositionFoundStatus.Accepted : PositionFoundStatus.Rejected;
+            _lastReceivedMessage.Status = accepted ? 
+                 PositionFoundStatus.Accepted : PositionFoundStatus.Rejected;
             Messenger.Instance.Broadcast(_lastReceivedMessage);
             Reset();
             if( !accepted) PlayConfirmationSound();
@@ -58,7 +56,8 @@ public class FloorConfirmer : MonoBehaviour
         else
         {
             ConfirmObject.SetActive(true);
-            ConfirmObject.transform.position = message.Location + Vector3.up * 0.05f;
+            ConfirmObject.transform.position = 
+                message.Location + Vector3.up * 0.05f;
         }
     }
 

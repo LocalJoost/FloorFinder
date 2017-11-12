@@ -939,7 +939,7 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-  IsGlobalListener: 1
+  IsGlobalListener: 0
   PersistentKeywords: 0
 --- !u!114 &1590964323
 MonoBehaviour:

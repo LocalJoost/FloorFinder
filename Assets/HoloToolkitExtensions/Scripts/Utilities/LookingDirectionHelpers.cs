@@ -24,7 +24,8 @@ namespace HoloToolkitExtensions.Utilities
                 : new Ray(Camera.main.transform.position, Camera.main.transform.forward);
 
             if (SpatialMappingManager.Instance != null &&
-                Physics.Raycast(headReady, out hitInfo, maxDistance, SpatialMappingManager.Instance.LayerMask))
+                Physics.Raycast(headReady, out hitInfo, maxDistance, 
+                SpatialMappingManager.Instance.LayerMask))
             {
                 return hitInfo.point;
             }
@@ -32,7 +33,8 @@ namespace HoloToolkitExtensions.Utilities
             return null;
         }
 
-        public static Vector3 CalculatePositionDeadAhead(float distance = 2, BaseRayStabilizer stabilizer = null)
+        public static Vector3 CalculatePositionDeadAhead(float distance = 2, 
+                                                         BaseRayStabilizer stabilizer = null)
         {
             return stabilizer != null
                 ? stabilizer.StableRay.origin + stabilizer.StableRay.direction.normalized * distance

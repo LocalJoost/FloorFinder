@@ -30,7 +30,8 @@ public class FloorFinder : MonoBehaviour
     {
         if (_foundPosition == null && Time.time > _delayMoment)
         {
-            _foundPosition = LookingDirectionHelpers.GetPositionInLookingDirection();
+            _foundPosition = LookingDirectionHelpers.GetPositionOnSpatialMap(MaxDistance, 
+                             GazeManager.Instance.Stabilizer);
             if (_foundPosition != null)
             {
                 if (GazeManager.Instance.Stabilizer.StablePosition.y - _foundPosition.Value.y > MinHeight)

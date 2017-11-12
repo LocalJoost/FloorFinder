@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class ConfirmSoundRinger : MonoBehaviour
 {
-
-    // Use this for initialization
     void Start()
     {
         Messenger.Instance.AddListener<ConfirmSoundMessage>(ProcessMessage);
@@ -17,6 +15,7 @@ public class ConfirmSoundRinger : MonoBehaviour
     }
 
     private AudioSource _audioSource;
+
     private void PlayConfirmationSound()
     {
         if (_audioSource == null)
