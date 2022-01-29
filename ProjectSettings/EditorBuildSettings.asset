@@ -6,5 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/FloorFinder.unity
-    guid: f42ae4abac500e54fbc3d03c4279374b
+    path: Assets/Application/Scenes/FloorFinder.unity
+    guid: 109b5d930163f5d408eb78e592c0c697
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: a4bc103ec74fdd942b5d562bab1fbbf1, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: e3b311a23bcb54a4b9399d53a65c59c1, type: 2}
